@@ -1,20 +1,22 @@
-import fs from 'fs';
-import { IBook, IRawBook } from './interfaces.js';
+import { Employee } from "./models/Employee.js";
 
-const rawBooks: IRawBook[] = JSON.parse(fs.readFileSync('./src/data/rawBooks.json', 'utf8'));
-
-const books: IBook[] = rawBooks.map(rawBook => {
-	return {
-		id: rawBook.id,
-		idCode: rawBook.idCode,
-		title: rawBook.title,
-		description: rawBook.description,
-		language: rawBook.language === '' ? 'english' : rawBook.language
-	}
-});
+// select => welche daten sollen geholt werden
+export const getEmployees = async () => {
+  try {
+    const employees = await Employee.find().select(
+      `firstName lastName title notes`
+    );
+    if (employees.length === 0) {
+      throw new Error("currently no data");
+    }
+    return employees;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
 
 export const getApiInstructions = () => {
-	return `
+  return `
 <style>
 	body {
 		background-color: #444;
@@ -22,22 +24,14 @@ export const getApiInstructions = () => {
 		color: #fff;
 		font-family: courier;
 	}
-	code {
-		background-color: #333;
+	a {
+		color: yellow;
 	}
 </style>
-<h1>Book Site API</h1>
+<h1>Employees Site API</h1>
 <ul>
-	<li><code>/books</code> - all books</li>
-	<li><code>/books/3</code> - book with id 3</li>
+	<li><a href="employees">/employees</a> - get all employees</li>
+	
 </ul>
 	`;
-}
-
-export const getBooks = (): IBook[] => {
-	return books;
-}
-
-export const getBook = (id: number): IBook => {
-	return books.find(m => m.id === id);
-}
+};
