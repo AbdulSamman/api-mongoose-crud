@@ -2,17 +2,12 @@ import { Employee } from "./models/Employee.js";
 
 // select => welche daten sollen geholt werden
 export const getEmployees = async () => {
-  try {
-    const employees = await Employee.find().select(
-      `firstName lastName title notes`
-    );
-    if (employees.length === 0) {
-      throw new Error("currently no data");
-    }
-    return employees;
-  } catch (error) {
-    throw new Error(error);
-  }
+  return [
+    {
+      firstName: "nnn",
+    },
+    { firstName: "asda" },
+  ];
 };
 
 export const getApiInstructions = () => {
