@@ -6,7 +6,6 @@ npm run dev
 ```
 
 ### TEST
-
 @url = http://localhost:3610
 
 ### BASE
@@ -25,8 +24,8 @@ POST {{url}}/employee
 Content-Type: application/json
 
  {
-    "firstName": "HAHA",
-    "lastName": "SAM",
+    "firstName": "Abdul",
+    "lastName": "Samman",
     "title": " President ",
     "notes":22
   }
@@ -38,8 +37,8 @@ PATCH {{url}}/employee/63c84ee246f4050a9465ab9d
 Content-Type: application/json
 
  {
-    "firstName": "SASASD",
-    "lastName": "SAM",
+    "firstName": "Abdulrazak",
+    "lastName": "Samman",
     "title": " President ",
     "notes":22
   }
