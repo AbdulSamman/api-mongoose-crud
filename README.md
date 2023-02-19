@@ -48,3 +48,5 @@ Content-Type: application/json
 DELETE {{url}}/employee/63c84ee146f4050a9465ab9b
 
  
+ ![APIMONGOOSECRUD](https://user-images.githubusercontent.com/97021586/219962420-8c3c112d-b187-429b-9529-e4fe3693bf89.gif)
+
