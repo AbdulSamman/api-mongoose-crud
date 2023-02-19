@@ -5,16 +5,14 @@ npm i
 npm run dev
 ```
 
-### TEST
-
-@url = http://localhost:3610
+### TEST@url = http://localhost:3618
 
 ### BASE
 {{url}}
 
 
 ### GET one EMPLOYEE
-GET {{url}}/employee/63c413bece003d083deefd10
+GET {{url}}/employee/63c413bece003d083deefd0f
 Content-Type: application/json
 
 ### GET ALL EMPLOYEES
@@ -25,28 +23,28 @@ POST {{url}}/employee
 Content-Type: application/json
 
  {
-    "firstName": "HAHA",
-    "lastName": "SAM",
-    "title": " President ",
+    "firstName": "Edward",
+    "lastName": "Tanguay",
+    "title": "Web-Developer",
     "notes":22
   }
 
  
 
 ### UPDATE EMPLOYEE with ID
-PATCH {{url}}/employee/63c84ee246f4050a9465ab9d
+PATCH {{url}}/employee/63c9367383bf66b095ebcbff
 Content-Type: application/json
 
  {
-    "firstName": "SASASD",
-    "lastName": "SAM",
-    "title": " President ",
+    "firstName": "Abdulrazak",
+    "lastName": "Samman",
+    "title": "Web-Developer",
     "notes":22
   }
  
 
 
 ### DELETE EMPLOYEE with ID
-DELETE {{url}}/employee/63c85146ec621bbaad9bdf30
+DELETE {{url}}/employee/63c84ee146f4050a9465ab9b
 
  
