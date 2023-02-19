@@ -20,13 +20,12 @@ export const getEmployees = async () => {
 export const getEmployee = (id: string) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const employee = await Employee.findById({ id });
+      const employee = await Employee.findById(id);
 
       resolve({
         status: "success",
         employee,
       });
-      return;
     } catch (error) {
       reject({
         status: "error",

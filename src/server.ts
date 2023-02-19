@@ -36,9 +36,8 @@ app.get(
   async (req: express.Request, res: express.Response) => {
     try {
       const id = req.params.id;
-      const employee = req.body;
       const getEmployee = await model.getEmployee(id);
-      res.send(200).json(getEmployee);
+      res.status(200).json(getEmployee);
     } catch (error) {
       res.status(500).send(error);
     }
