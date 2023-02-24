@@ -9,7 +9,7 @@ export const getEmployees = async () => {
       `lastName firstName title notes`
     );
     if (employees.length === 0) {
-      throw new Error("there is no dara");
+      throw new Error("there is no data");
     }
     return employees;
   } catch (error) {
